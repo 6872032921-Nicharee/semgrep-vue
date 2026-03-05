@@ -109,7 +109,7 @@ jobs:
             # --- SCA (Supply Chain / CVE) ---
             SCA_FILE="../results/${VERSION}_sca.json"
 
-            semgrep ci \
+            SEMGREP_BRANCH="release/$VERSION" semgrep ci \
               --supply-chain \
               --exclude="*__tests__*" \
               --exclude="*__mocks__*" \
